@@ -10,7 +10,22 @@ $("#shoot").click(function(){
     let box = $("#input").val();
 
     $("#userChoice").text(box);
-    $("#computerChoice").text(box);
+
+    var generator = Math.random();
+    var computerchoices;
+    
+    if (generator > .3 ) {
+        $("#text").append("Scissors");
+    }
+      else if (generator > .6 ) {
+        $("#text").append("Rock")
+      }
+      else{
+        $("#text").append("Paper")
+      }
+      $("#computerChoice").text(computerchoices);
+          console.log("work?"); 
+
 });
 });
 // DOCUMENT READY FUNCTION BELOW
